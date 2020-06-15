@@ -1,0 +1,1 @@
+Some small python project for hand-on learning.

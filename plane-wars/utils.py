@@ -1,3 +1,8 @@
+"""
+定义功能类
+主要包括按钮、游戏结果记录
+"""
+
 import pygame
 from cfg import *
 

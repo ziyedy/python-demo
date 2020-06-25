@@ -1,3 +1,9 @@
+"""
+定义精灵类
+包括子弹、我方飞机、敌方飞机
+"""
+
+
 import pygame
 from cfg import *
 from random import randint

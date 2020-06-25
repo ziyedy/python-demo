@@ -1,7 +1,12 @@
+"""
+定义主函数、游戏运行类
+包括游戏主循环与事件监听
+"""
+
 import pygame
 import sys
 from cfg import *
-from plane import Hero, Enemy
+from sprite import Hero, Enemy
 from utils import Button, Result
 
 
@@ -128,3 +133,13 @@ class Game:
 
             # 刷新屏幕
             pygame.display.update()
+
+
+def main():
+    """ 主函数 """
+    game = Game()
+    game.run_game()
+
+
+if __name__ == '__main__':
+    main()

@@ -1,3 +1,7 @@
+"""
+定义游戏的一些固定参数
+"""
+
 import os
 import pygame
 

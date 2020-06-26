@@ -38,7 +38,7 @@ class Game:
 
         self.btn_enter = [Button(BTN_ENTER1), Button(BTN_ENTER2)]
 
-        self.score_font = pygame.font.SysFont('宋体', 45)
+        self.font = pygame.font.Font(FONT, 45)
 
     def get_enemies(self, num):
         """
@@ -100,13 +100,13 @@ class Game:
             if self.status == self.READY:
                 self.screen.blit(self.img_bg, self.img_bg.get_rect())
                 self.screen.blit(self.btn_enter[self.btn_start_index].image, self.btn_enter[0].rect)
-                max_score_text = self.score_font.render('Max scores:{0}'.format(self.result.get_max_score()), True, RED)
+                max_score_text = self.font.render('Max scores:{0}'.format(self.result.get_max_score()), True, RED)
                 self.screen.blit(max_score_text, [0, 0])
 
             elif self.status == self.START:
                 self.screen.blit(self.img_bg, self.img_bg.get_rect())
-                score_text = self.score_font.render('Scores:{0}'.format(self.result.score), True, RED)
-                blood_text = self.score_font.render('Blood:{}'.format(self.result.blood), True, RED)
+                score_text = self.font.render('Scores:{0}'.format(self.result.score), True, RED)
+                blood_text = self.font.render('Blood:{}'.format(self.result.blood), True, RED)
                 self.screen.blit(score_text, [0, 5])
                 self.screen.blit(blood_text, [0, 45])
 
@@ -124,9 +124,9 @@ class Game:
 
             elif self.status == self.OVER:
                 self.screen.blit(self.img_bg, self.img_bg.get_rect())
-                score_text = self.score_font.render('Scores:{0}'.format(self.result.score), True, RED)
-                max_score_text = self.score_font.render('Max scores:{0}'.format(self.result.get_max_score()), True, RED)
-                tip_text = self.score_font.render('Press the Space to continue!', True, RED)
+                score_text = self.font.render('Scores:{0}'.format(self.result.score), True, RED)
+                max_score_text = self.font.render('Max scores:{0}'.format(self.result.get_max_score()), True, RED)
+                tip_text = self.font.render('Press the Space to continue!', True, RED)
                 self.screen.blit(score_text, (WIN_SIZE[0]/2-70, WIN_SIZE[1]/2-40))
                 self.screen.blit(max_score_text, (WIN_SIZE[0]/2-100, WIN_SIZE[1]/2-90))
                 self.screen.blit(tip_text, (WIN_SIZE[0]/2-200, WIN_SIZE[1]/2-135))

@@ -1,2 +1,6 @@
-/.vscode
-/__pycache__
+
+# 排除python配置文件
+.vscode
+__pycache__
+.idea
+

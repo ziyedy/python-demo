@@ -45,5 +45,8 @@ MUC_BULLET = os.path.join(SRC_DIR, 'sounds/bullet.wav')
 MUC_ENEMY_DOWN = os.path.join(SRC_DIR, 'sounds/enemy_down.wav')
 MUC_GAME_OVER = os.path.join(SRC_DIR, 'sounds/game_over.wav')
 
+# 字体
+FONT = os.path.join(SRC_DIR, 'Gabriola.ttf')
+
 # 游戏结果存储
 GAME_RECORD = os.path.join(SRC_DIR, 'record.txt')
